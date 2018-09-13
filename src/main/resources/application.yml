@@ -1,0 +1,6 @@
+#默认dev
+spring:
+  profiles:
+          active: dev
+
+
