@@ -1,0 +1,83 @@
+
+spring:
+#    application:
+#        name: thea-backend-zsc
+    http:
+        multipart:
+            maxFileSize: 10MB
+            maxRequestSize: 10MB
+            max-request-size: 20MB
+            max-file-size: 10MB
+            enabled: true
+    datasource:
+             master:
+                 url: jdbc:mysql://127.0.0.1:3306/mattburg?autoReconnect=true&useSSL=true&allowMultiQueries=true
+                 username: root
+                 password: root
+                 driver-class-name: com.mysql.jdbc.Driver
+                 initial-size: 20
+                 max-active: 100
+                 max-idle: 5
+                 max-wait: 10000
+                 min-idle: 1
+                 testOnBorrow: true
+                 validationQuery: SELECT 1
+
+
+             readOnly:
+                 url: jdbc:mysql://127.0.0.1:3306/mattburg?autoReconnect=true&useSSL=true&allowMultiQueries=true
+                 username: root
+                 password: root
+                 driver-class-name: com.mysql.jdbc.Driver
+                 initial-size: 20
+                 max-active: 100
+                 max-idle: 5
+                 max-wait: 10000
+                 min-idle: 1
+                 testOnBorrow: true
+                 validationQuery: SELECT 1
+
+
+
+              #    redis:
+#        host: 192.168.36.10
+#        port: 6379
+#        database: 13
+#        password: jc123456!
+#        timeout: 120000
+#        pool:
+#          #池中可借的最大数
+#          max-active: 120
+#          #允许池中空闲的最大连接数
+#          max-idle: 30
+#          #获取连接最大等待时间（毫秒）
+#          max-wait: 12000
+#          #允许池中空闲的最小连接数
+#          min-idle: 0
+
+mybatis:
+    mapperLocations: classpath:mapper/*.xml
+    typeAliasesPackage: com.jc.lucifer.po
+
+server:
+    port: 8000
+
+sign:
+   corn: 0 20/3 11 * * ?
+   sceneCorn: 0 0/30 4-5 * * ?
+   signNumber: 3
+   smsUrlPre: http://192.168.36.11:20020
+   smsPhoneMaster: 15201950086
+   mailTo: jonynian@51jiecai.com
+   carLoanCallbackUrl: http://www_car.jc.com/carapi/rmiContract/signed/updateSignStatus
+
+
+
+
+
+
+
+
+
+
+

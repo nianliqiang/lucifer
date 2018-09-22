@@ -16,20 +16,20 @@
               yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n" />
 
     <!-- test文件路径 -->
-    <property name="DEV_FILE_PATH" value="/opt/tomcat/logs/jcDataDock" />
+    <property name="DEV_FILE_PATH" value="/opt/tomcat/logs/lucifer" />
     <!-- test文件路径 -->
-    <property name="TEST_FILE_PATH" value="/opt/tomcat/logs/jcDataDock" />
+    <property name="TEST_FILE_PATH" value="/opt/tomcat/logs/lucifer" />
     <!-- prod文件路径 -->
-    <property name="PROD_FILE_PATH" value="/opt/tomcat/logs/jcDataDock" />
+    <property name="PROD_FILE_PATH" value="/opt/tomcat/logs/lucifer" />
 
     <!-- 开发环境 -->
     <springProfile name="dev">
         <appender name="DEV-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
             <!-- 文件路径 -->
-            <file>${DEV_FILE_PATH}/jcDataDock.log</file>
+            <file>${DEV_FILE_PATH}/lucifer.log</file>
             <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
                 <!-- 文件名称 -->
-                <fileNamePattern>${DEV_FILE_PATH}/jcDataDock.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <fileNamePattern>${DEV_FILE_PATH}/lucifer.%d{yyyy-MM-dd}.log</fileNamePattern>
                 <!-- 文件最大保存历史数量 -->
                 <MaxHistory>100</MaxHistory>
             </rollingPolicy>
@@ -50,7 +50,7 @@
             </encoder>
         </appender>
 
-        <logger name="com.jc.jcDataDock" level="debug"/>
+        <logger name="com.jc.lucifer" level="debug"/>
 
         <root level="info">
             <appender-ref ref="DEV-FILE" />
@@ -63,10 +63,10 @@
         <!-- 每天产生一个文件 -->
         <appender name="TEST-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
             <!-- 文件路径 -->
-            <file>${TEST_FILE_PATH}/jcDataDock.log</file>
+            <file>${TEST_FILE_PATH}/lucifer.log</file>
             <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
                 <!-- 文件名称 -->
-                <fileNamePattern>${TEST_FILE_PATH}/jcDataDock.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <fileNamePattern>${TEST_FILE_PATH}/lucifer.%d{yyyy-MM-dd}.log</fileNamePattern>
                 <!-- 文件最大保存历史数量 -->
                 <MaxHistory>100</MaxHistory>
             </rollingPolicy>
@@ -85,7 +85,7 @@
                 <charset>utf8</charset>
             </encoder>
         </appender>
-        <logger name="com.jc.jcDataDock" level="debug"/>
+        <logger name="com.jc.lucifer" level="debug"/>
         <root level="info">
             <appender-ref ref="TEST-FILE" />
             <appender-ref ref="CONSOLE" />
@@ -97,10 +97,10 @@
         <!-- 每天产生一个文件 -->
         <appender name="PROD-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
             <!-- 文件路径 -->
-            <file>${PROD_FILE_PATH}/jcDataDock.log</file>
+            <file>${PROD_FILE_PATH}/lucifer.log</file>
             <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
                 <!-- 文件名称 -->
-                <fileNamePattern>${PROD_FILE_PATH}/jcDataDock.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <fileNamePattern>${PROD_FILE_PATH}/lucifer.%d{yyyy-MM-dd}.log</fileNamePattern>
                 <!-- 文件最大保存历史数量 -->
                 <MaxHistory>100</MaxHistory>
             </rollingPolicy>
@@ -116,7 +116,7 @@
             </encoder>
         </appender>
 
-        <logger name="com.jc.jcDataDock" level="info"/>
+        <logger name="com.jc.lucifer" level="info"/>
         <root level="info">
             <appender-ref ref="PROD-FILE" />
             <appender-ref ref="CONSOLE" />

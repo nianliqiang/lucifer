@@ -1,10 +1,10 @@
 package com.lucifer.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lucifer.commons.ResponseModel;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.Serializable;
-import jodd.util.StringUtil;
 
 /**
  * Created by jonynian on 2018/9/13.

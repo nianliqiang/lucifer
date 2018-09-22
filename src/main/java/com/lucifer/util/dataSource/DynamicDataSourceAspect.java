@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class DynamicDataSourceAspect {
 
-    @Before("@annotation(DataSource)")
+    @Before("@annotation(com.lucifer.util.dataSource.DataSource)")
     public void beforeSwitchDS(JoinPoint point){
         //获得当前访问的class
         Class<?> className = point.getTarget().getClass();
@@ -40,7 +40,7 @@ public class DynamicDataSourceAspect {
         DataSourceContextHolder.setDB(dataSource);
     }
 
-    @After("@annotation(DataSource)")
+    @After("@annotation(com.lucifer.util.dataSource.DataSource)")
     public void afterSwitchDS(JoinPoint point){
         DataSourceContextHolder.clearDB();
     }

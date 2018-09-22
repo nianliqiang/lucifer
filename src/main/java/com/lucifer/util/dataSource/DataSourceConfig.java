@@ -18,19 +18,19 @@ import org.springframework.transaction.PlatformTransactionManager;
 @Configuration
 public class DataSourceConfig {
 
-    public  static  final  String READ_ONLY="loanadmin";
+    public  static  final  String READ_ONLY="readOnly";
     public  static  final  String MASTER="master";
 
     //数据源1
     @Bean(name = READ_ONLY)
-    @ConfigurationProperties(prefix = "spring.loanadmin")
+    @ConfigurationProperties(prefix = "spring.datasource.readOnly")
     public DataSource loanadmin() {
         return DataSourceBuilder.create().build();
     }
 
     //数据源2
     @Bean(name = MASTER)
-    @ConfigurationProperties(prefix = "spring.master")
+    @ConfigurationProperties(prefix = "spring.datasource.master")
     public DataSource master() {
         return DataSourceBuilder.create().build();
     }

@@ -254,7 +254,7 @@ public class ZipUtil {
         {
             String zipPath = null;
             try {
-                zipPath = "\\home\\website\\site\\jcDataDock\\ZIPFile";
+                zipPath = "\\home\\website\\site\\lucifer\\ZIPFile";
                 File file = new File(zipPath);
                 PrintWriter printWriter = new PrintWriter(file);
                 printWriter.println ("hello");
@@ -266,7 +266,7 @@ public class ZipUtil {
             }catch (Exception e){
                 //todo 其他异常
             }
-            String dir = "\\home\\website\\site\\jcDataDock\\CSVFile\\2018-08-08\\";
+            String dir = "\\home\\website\\site\\lucifer\\CSVFile\\2018-08-08\\";
             String zipFileName = "913101093017366870201808083300.zip";
             try
             {
